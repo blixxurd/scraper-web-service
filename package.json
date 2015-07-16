@@ -1,0 +1,12 @@
+{
+  "name"         : "great-escrape",
+  "version"      : "0.0.1",
+  "description"  : "Basic scraper service. Scrapes a URL and outputs data in a JSON format for easy consumption.",
+  "main"         : "server.js",
+  "author"       : "Aaron Bartholomew",
+  "dependencies" : {
+    "express"    : "latest",
+    "request"    : "latest",
+    "cheerio"    : "latest"
+  }
+}
