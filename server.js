@@ -17,14 +17,21 @@ app.get('/', function(req, res){
 
 					var output = {}, rawScript;
 
+					//Build Output
 					output.request_url = url;
 					output.assets= {};
 					output.scripts= {};
 					output.images= {};
-					output.markup= html;
+					output.links = {};
+					output.dom_object= html;
 
 					$('link').each(function(i, ele) {
 						output.assets[i] = $(this).attr('href');
+					});
+
+
+					$('a').each(function(i, ele) {
+						output.links[i] = $(this).attr('href');
 					});
 
 					$('script').each(function(i, ele) {
